@@ -213,7 +213,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact & Support
 
 - **Website**: [khiladilive.in](https://khiladilive.in)
-- **Email**: support@khiladilive.in
+- **Email**: contact@khiladilive.in
 - **Social Media**: Follow us for updates
 - **Community**: Join our Discord server
 

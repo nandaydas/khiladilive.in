@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KhiladiLive - India's premier cricket analytics platform. Get live scores, AI-powered predictions, detailed player matchups, and join free community contests. No gambling, 100% legal skill-based cricket analytics app.">
+    <meta name="keywords" content="cricket analytics, live cricket scores, cricket predictions, cricket app, fantasy cricket, cricket data, player stats, cricket AI, free cricket contests, India cricket">
+    <meta name="author" content="KhiladiLive">
+    <meta name="robots" content="index, follow">
     <title>KhiladiLive - Master the Game with Elite Stats</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -67,7 +71,7 @@
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-200 p-2 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-200 p-2 focus:outline-none" aria-label="Toggle mobile menu">
                         <i data-lucide="menu" class="h-8 w-8"></i>
                     </button>
                 </div>
@@ -85,6 +89,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <!-- Adjusted padding for mobile responsiveness -->
     <div class="relative pt-24 pb-24 md:pt-32 md:pb-32 hero-pattern overflow-hidden">
@@ -106,7 +111,7 @@
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <!-- Official Google Play Button Style -->
-                        <button class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]">
+                        <button class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive from Google Play Store">
                             <svg class="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 3.5L42 24L8 44.5V3.5Z" stroke="none" fill="#4285F4"/>
                                 <path d="M42 24L30 31L8 8.5L42 24Z" fill="#EA4335"/>
@@ -120,7 +125,7 @@
                         </button>
 
                         <!-- Direct Download Button (Shortened Text) -->
-                        <button class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]">
+                        <button class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app directly">
                             <i data-lucide="download" class="h-6 w-6"></i>
                             Download
                         </button>
@@ -410,6 +415,10 @@
                             <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
                             <span>Access to Elite Community Leagues</span>
                         </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
+                            <span>Live Cricket Streaming</span>
+                        </li>
                     </ul>
                     <button class="w-full py-3 rounded-lg bg-white text-brand-900 font-bold hover:bg-gray-100 transition shadow-lg active:scale-95 mt-auto">Subscribe Now</button>
                 </div>
@@ -429,7 +438,7 @@
             <div class="space-y-4">
                 <!-- FAQ 1 -->
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq1')">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq1')" aria-label="Toggle answer for: Is KhiladiLive legal in India?">
                         <span class="font-bold text-gray-900 text-sm md:text-base">Is KhiladiLive legal in India?</span>
                         <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq1"></i>
                     </button>
@@ -440,7 +449,7 @@
 
                 <!-- FAQ 2 -->
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq2')">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq2')" aria-label="Toggle answer for: Do I need to pay a subscription to play contests?">
                         <span class="font-bold text-gray-900 text-sm md:text-base">Do I need to pay a subscription to play contests?</span>
                         <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq2"></i>
                     </button>
@@ -451,7 +460,7 @@
 
                 <!-- FAQ 3 -->
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq3')">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq3')" aria-label="Toggle answer for: Can I win cash prizes?">
                         <span class="font-bold text-gray-900 text-sm md:text-base">Can I win cash prizes?</span>
                         <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq3"></i>
                     </button>
@@ -462,7 +471,7 @@
 
                 <!-- FAQ 4 -->
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq4')">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq4')" aria-label="Toggle answer for: How accurate are the AI predictions?">
                         <span class="font-bold text-gray-900 text-sm md:text-base">How accurate are the AI predictions?</span>
                         <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq4"></i>
                     </button>
@@ -583,11 +592,11 @@
                 </div>
                 
                 <!-- Left/Right Navigation Buttons -->
-                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10">
+                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10" aria-label="Previous testimonial">
                     <i data-lucide="chevron-left" class="h-6 w-6"></i>
                 </button>
                 
-                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10">
+                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10" aria-label="Next testimonial">
                     <i data-lucide="chevron-right" class="h-6 w-6"></i>
                 </button>
             </div>
@@ -601,7 +610,7 @@
             <p class="text-base md:text-lg text-white mb-10">Join 100,000+ cricket fans using KhiladiLive today.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <!-- Official Google Play Button Style -->
-                <button class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-lg active:scale-95 min-w-[200px]">
+                <button class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Get KhiladiLive on Google Play">
                     <svg class="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 3.5L42 24L8 44.5V3.5Z" stroke="none" fill="#4285F4"/>
                         <path d="M42 24L30 31L8 8.5L42 24Z" fill="#EA4335"/>
@@ -615,13 +624,14 @@
                 </button>
 
                 <!-- Direct Download Button (Shortened Text) -->
-                <button class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg active:scale-95 min-w-[200px]">
+                <button class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app now">
                     <i data-lucide="download" class="h-6 w-6"></i>
                     Download
                 </button>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
@@ -669,89 +679,6 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // FAQ Toggle
-        function toggleFaq(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById('icon-' + id);
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-            } else {
-                content.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-            }
-        }
-
-        // Testimonial Carousel
-        let currentSlide = 0;
-        const totalSlides = 5;
-        let autoSlideInterval;
-
-        function initTestimonialCarousel() {
-            const carousel = document.getElementById('testimonialCarousel');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-
-            function updateCarousel() {
-                const translateX = -currentSlide * 100;
-                carousel.style.transform = `translateX(${translateX}%)`;
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateCarousel();
-            }
-
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateCarousel();
-            }
-
-            function resetAutoSlide() {
-                clearInterval(autoSlideInterval);
-                autoSlideInterval = setInterval(nextSlide, 2000); // Auto-slide every 2 seconds
-            }
-
-            // Add click events to navigation buttons
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetAutoSlide(); // Reset the timer when manually navigating
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetAutoSlide(); // Reset the timer when manually navigating
-            });
-
-            // Pause auto-slide on hover
-            const testimonialSection = document.querySelector('.testimonial-carousel').parentElement.parentElement;
-            testimonialSection.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideInterval);
-            });
-
-            testimonialSection.addEventListener('mouseleave', () => {
-                resetAutoSlide();
-            });
-
-            // Start auto-slide
-            resetAutoSlide();
-            updateCarousel(); // Initial update
-        }
-
-        // Initialize carousel when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initTestimonialCarousel);
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
