@@ -255,11 +255,15 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-brand-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 KhiladiLive. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer"></div>
+    <script>
+        fetch("../footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            lucide.createIcons(); // render icons AFTER footer loads
+        });
+    </script>
 
     <script>
         lucide.createIcons();

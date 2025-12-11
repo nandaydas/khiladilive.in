@@ -211,7 +211,7 @@
                     <ul class="list-none mb-6 space-y-2">
                         <li><strong>Email:</strong> contact@khiladilive.in</li>
                         <li><strong>Support:</strong> contact@khiladilive.in</li>
-                        <li><strong>Address:</strong> KhiladiLive Legal Team, [Your Address]</li>
+                        <li><strong>Address:</strong> KhiladiLive Legal Team, Nuh, Haryana, 122108</li>
                     </ul>
 
                     <div class="bg-brand-50 border border-brand-200 rounded-lg p-6 mt-8">
@@ -224,11 +224,15 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-brand-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 KhiladiLive. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer"></div>
+    <script>
+        fetch("../footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            lucide.createIcons(); // render icons AFTER footer loads
+        });
+    </script>
 
     <script>
         lucide.createIcons();

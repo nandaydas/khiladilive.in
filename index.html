@@ -64,9 +64,11 @@
                     <a href="#features" class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Features</a>
                     <a href="#data" class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Data Intel</a>
                     <a href="#pricing" class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Pricing</a>
-                    <button class="bg-white text-brand-900 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition shadow-lg transform hover:scale-105 active:scale-95">
+                    <a 
+                    href="#download_cta"
+                    class="bg-white text-brand-900 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition shadow-lg transform hover:scale-105 active:scale-95">
                         Download App
-                    </button>
+                    </a>
                 </div>
                 
                 <!-- Mobile menu button -->
@@ -111,7 +113,10 @@
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <!-- Official Google Play Button Style -->
-                        <button class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive from Google Play Store">
+                        <a 
+                        href="https://play.google.com/store/apps/details?id=com.khiladilive.cricket"
+                        target="_blank"
+                        class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive from Google Play Store">
                             <svg class="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 3.5L42 24L8 44.5V3.5Z" stroke="none" fill="#4285F4"/>
                                 <path d="M42 24L30 31L8 8.5L42 24Z" fill="#EA4335"/>
@@ -122,13 +127,16 @@
                                 <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Get it on</span>
                                 <span class="text-lg font-bold leading-tight font-sans">Google Play</span>
                             </div>
-                        </button>
+                        </a>
 
                         <!-- Direct Download Button (Shortened Text) -->
-                        <button class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app directly">
+                        <a 
+                        href="\downloads\app-release.apk"
+                        target="_blank"
+                        class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app directly">
                             <i data-lucide="download" class="h-6 w-6"></i>
                             Download
-                        </button>
+                        </a>
                     </div>
                     
                     <!-- Legal Badge -->
@@ -604,13 +612,16 @@
     </section>
 
     <!-- Download CTA -->
-    <section class="py-16 md:py-20 bg-brand-800 text-white text-center">
+    <section class="py-16 md:py-20 bg-brand-800 text-white text-center" id="download_cta">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Ready to Level Up?</h2>
             <p class="text-base md:text-lg text-white mb-10">Join 100,000+ cricket fans using KhiladiLive today.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <!-- Official Google Play Button Style -->
-                <button class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Get KhiladiLive on Google Play">
+                <a 
+                href="https://play.google.com/store/apps/details?id=com.khiladilive.cricket"
+                target="_blank"
+                class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Get KhiladiLive on Google Play">
                     <svg class="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 3.5L42 24L8 44.5V3.5Z" stroke="none" fill="#4285F4"/>
                         <path d="M42 24L30 31L8 8.5L42 24Z" fill="#EA4335"/>
@@ -621,63 +632,31 @@
                         <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Get it on</span>
                         <span class="text-lg font-bold leading-tight font-sans">Google Play</span>
                     </div>
-                </button>
+                </a>
 
                 <!-- Direct Download Button (Shortened Text) -->
-                <button class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app now">
+                <a 
+                href="\downloads\app-release.apk"
+                target="_blank"
+                class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app now">
                     <i data-lucide="download" class="h-6 w-6"></i>
                     Download
-                </button>
+                </a>
             </div>
         </div>
     </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
-            <div class="col-span-1 md:col-span-2 flex flex-col items-center md:items-start">
-                <div class="flex items-center gap-2 mb-4">
-                    <i data-lucide="zap" class="h-6 w-6 text-brand-600"></i>
-                    <span class="font-display font-bold text-2xl text-white uppercase tracking-wider">KhiladiLive</span>
-                </div>
-                <p class="text-sm max-w-sm mb-6">
-                    India's premier cricket analytics platform. We empower fans with data, insights, and community engagement.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="hover:text-white"><i data-lucide="twitter" class="h-5 w-5"></i></a>
-                    <a href="#" class="hover:text-white"><i data-lucide="instagram" class="h-5 w-5"></i></a>
-                    <a href="#" class="hover:text-white"><i data-lucide="facebook" class="h-5 w-5"></i></a>
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="text-white font-bold mb-4">Product</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-brand-500">Live Scores</a></li>
-                    <li><a href="#" class="hover:text-brand-500">Analytics Pro</a></li>
-                    <li><a href="#" class="hover:text-brand-500">Community</a></li>
-                    <li><a href="#" class="hover:text-brand-500">Pricing</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-white font-bold mb-4">Legal</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="pages/privacy-policy.html" class="hover:text-brand-500">Privacy Policy</a></li>
-                    <li><a href="pages/terms-of-service.html" class="hover:text-brand-500">Terms of Service</a></li>
-                    <li><a href="pages/disclaimer.html" class="hover:text-brand-500">Disclaimer</a></li>
-                    <li><a href="pages/refund-policy.html" class="hover:text-brand-500">Refund Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-xs text-center text-gray-600">
-            <p class="mb-2">&copy; 2025 KhiladiLive. All rights reserved.</p>
-            <p>
-                <strong>Disclaimer:</strong> KhiladiLive is a live score and analytics platform. All contests hosted on the platform are 100% free to enter and are intended for social and entertainment purposes only. We do not offer "Online Money Games" or gambling services. Subscription fees are strictly for data and content services.
-            </p>
-        </div>
-    </footer>
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+            lucide.createIcons(); // render icons AFTER footer loads
+        });
+    </script>
 
     <script src="assets/js/main.js"></script>
 </body>
