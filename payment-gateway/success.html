@@ -97,6 +97,18 @@
                     <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 px-2 sm:px-0">
                         Welcome to the elite cricket analytics experience! Your subscription has been activated successfully.
                     </p>
+                    
+                    <!-- Auto-redirect Notice -->
+                    <div class="bg-yellow-50 border-2 border-yellow-200 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-6">
+                        <div class="flex items-center justify-center mb-2">
+                            <i data-lucide="info" class="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mr-2"></i>
+                            <span class="font-semibold text-yellow-800 text-sm sm:text-base">Important Notice</span>
+                        </div>
+                        <p class="text-yellow-700 text-sm sm:text-base text-center">
+                            Don't press the back button - you'll be auto redirected to the app
+                        </p>
+                    </div>
+                    
                     <div class="bg-green-50 border-2 border-green-200 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-6">
                         <div class="flex items-center justify-center mb-3">
                             <i data-lucide="check-circle" class="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mr-2"></i>
@@ -119,15 +131,11 @@
                 <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200">
                     <p class="text-xs sm:text-sm text-gray-500 mb-2 px-2 sm:px-0">Need help? Our support team is here for you!</p>
                     <div class="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-2 sm:space-y-0 text-xs sm:text-sm">
-                        <a href="mailto:support@khiladilive.in" class="text-brand-600 hover:text-brand-700 transition">
+                        <a href="mailto:contact@khiladilive.in" class="text-brand-600 hover:text-brand-700 transition">
                             <i data-lucide="mail" class="h-3 w-3 sm:h-4 sm:w-4 inline mr-1"></i>
-                            Email Support
+                            contact@khiladilive.in
                         </a>
-                        <span class="text-gray-300 hidden sm:inline">|</span>
-                        <a href="/pages/terms-of-service.html" class="text-brand-600 hover:text-brand-700 transition">
-                            <i data-lucide="file-text" class="h-3 w-3 sm:h-4 sm:w-4 inline mr-1"></i>
-                            Terms of Service
-                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -141,7 +149,7 @@
         // Get transaction ID from URL parameters
         function getTransactionId() {
             const urlParams = new URLSearchParams(window.location.search);
-            const transactionId = urlParams.get('transaction_id') || urlParams.get('txn_id') || urlParams.get('id');
+            const transactionId = urlParams.get('client_txn_id');
             return transactionId || 'TXN' + Date.now();
         }
 
