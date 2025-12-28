@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Payment Successful - KhiladiLive Subscription">
+    <title>Payment Successful - KhiladiLive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff0f0',
+                            100: '#ffdede',
+                            600: '#ef233c',
+                            700: '#d90429',
+                            800: '#b90524',
+                            900: '#8d0018',
+                            950: '#52000e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Teko', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes checkmark {
+            0% {
+                stroke-dashoffset: 50;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        @keyframes confetti {
+            0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .checkmark-circle {
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+            animation: checkmark 0.6s ease-in-out 0.3s forwards;
+        }
+        
+        .success-bounce {
+            animation: bounce 0.6s ease-in-out 0.9s;
+        }
+        
+        .confetti {
+            animation: confetti 3s linear forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <!-- Confetti Animation -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-10" id="confetti-container"></div>
+
+    <!-- Main Content -->
+    <div class="min-h-screen pt-8 pb-8 sm:pt-16 sm:pb-16 flex items-center justify-center">
+        <div class="max-w-2xl mx-auto px-3 sm:px-6 lg:px-8 w-full">
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 text-center relative overflow-hidden">
+                
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-5">
+                    <div class="absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ef233c' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+                </div>
+                
+                <!-- Success Icon -->
+                <div class="relative mb-6 sm:mb-8">
+                    <div class="mx-auto w-20 h-20 sm:w-24 sm:h-24 bg-green-100 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                        <svg class="w-12 h-12 sm:w-16 sm:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" class="text-green-500 checkmark-circle"/>
+                            <path d="m9 12 2 2 4-4" class="text-green-500" style="stroke-dasharray: 12; stroke-dashoffset: 12; animation: checkmark 0.6s ease-in-out 0.6s forwards;"/>
+                        </svg>
+                    </div>
+                    <div class="success-bounce">
+                        <h1 class="text-2xl sm:text-4xl md:text-5xl font-display font-bold text-brand-900 mb-2">
+                            Payment Successful!
+                        </h1>
+                        <div class="w-16 sm:w-24 h-1 bg-gradient-to-r from-brand-600 to-brand-700 rounded-full mx-auto"></div>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div class="mb-6 sm:mb-8">
+                    <p class="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 px-2 sm:px-0">
+                        Welcome to the elite cricket analytics experience! Your subscription has been activated successfully.
+                    </p>
+                    <div class="bg-green-50 border-2 border-green-200 rounded-lg sm:rounded-xl p-4 sm:p-6 mb-6">
+                        <div class="flex items-center justify-center mb-3">
+                            <i data-lucide="check-circle" class="h-5 w-5 sm:h-6 sm:w-6 text-green-600 mr-2"></i>
+                            <span class="font-semibold text-green-800 text-sm sm:text-base">Transaction Completed</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-xs sm:text-sm gap-1 sm:gap-0">
+                                <span class="text-gray-600">Transaction ID:</span>
+                                <span class="font-mono font-bold text-brand-900 bg-gray-100 px-2 sm:px-3 py-1 rounded text-xs sm:text-sm" id="transaction-id">Loading...</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-xs sm:text-sm gap-1 sm:gap-0">
+                                <span class="text-gray-600">Date & Time:</span>
+                                <span class="font-medium text-gray-800" id="transaction-date"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200">
+                    <p class="text-xs sm:text-sm text-gray-500 mb-2 px-2 sm:px-0">Need help? Our support team is here for you!</p>
+                    <div class="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-2 sm:space-y-0 text-xs sm:text-sm">
+                        <a href="mailto:support@khiladilive.in" class="text-brand-600 hover:text-brand-700 transition">
+                            <i data-lucide="mail" class="h-3 w-3 sm:h-4 sm:w-4 inline mr-1"></i>
+                            Email Support
+                        </a>
+                        <span class="text-gray-300 hidden sm:inline">|</span>
+                        <a href="/pages/terms-of-service.html" class="text-brand-600 hover:text-brand-700 transition">
+                            <i data-lucide="file-text" class="h-3 w-3 sm:h-4 sm:w-4 inline mr-1"></i>
+                            Terms of Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Get transaction ID from URL parameters
+        function getTransactionId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const transactionId = urlParams.get('transaction_id') || urlParams.get('txn_id') || urlParams.get('id');
+            return transactionId || 'TXN' + Date.now();
+        }
+
+        // Set transaction details
+        function setTransactionDetails() {
+            const transactionId = getTransactionId();
+            const currentDate = new Date();
+            
+            document.getElementById('transaction-id').textContent = transactionId;
+            document.getElementById('transaction-date').textContent = currentDate.toLocaleString('en-IN', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                timeZone: 'Asia/Kolkata'
+            });
+        }
+
+        // Create confetti animation
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#ef233c', '#d90429', '#b90524', '#ffd700', '#00ff00'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti absolute w-2 h-2';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.animationDelay = Math.random() * 2 + 's';
+                    confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    container.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 5000);
+                }, i * 100);
+            }
+        }
+
+        // Copy transaction ID to clipboard
+        document.getElementById('transaction-id').addEventListener('click', function() {
+            navigator.clipboard.writeText(this.textContent).then(() => {
+                const originalText = this.textContent;
+                this.textContent = 'Copied!';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                }, 1000);
+            });
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            setTransactionDetails();
+            setTimeout(createConfetti, 1000);
+        });
+
+        // Add tooltip to transaction ID
+        document.getElementById('transaction-id').title = 'Click to copy transaction ID';
+        document.getElementById('transaction-id').style.cursor = 'pointer';
+    </script>
+</body>
+</html>
