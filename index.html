@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KhiladiLive - India's premier cricket analytics platform. Get live scores, AI-powered predictions, detailed player matchups, and join free community contests. No gambling, 100% legal skill-based cricket analytics app.">
-    <meta name="keywords" content="cricket analytics, live cricket scores, cricket predictions, cricket app, fantasy cricket, cricket data, player stats, cricket AI, free cricket contests, India cricket">
+    <meta name="description"
+        content="KhiladiLive - India's premier cricket analytics platform. Get live scores, AI-powered predictions, detailed player matchups, and join free community contests. No gambling, 100% legal skill-based cricket analytics app.">
+    <meta name="keywords"
+        content="cricket analytics, live cricket scores, cricket predictions, cricket app, fantasy cricket, cricket data, player stats, cricket AI, free cricket contests, India cricket">
     <meta name="author" content="KhiladiLive">
     <meta name="robots" content="index, follow">
     <title>KhiladiLive - Master the Game with Elite Stats</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -40,6 +45,7 @@
             background-color: #8d0018;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d90429' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
         .phone-mockup {
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             border: 8px solid #1a1a1a;
@@ -48,10 +54,12 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-brand-900/95 backdrop-blur-sm border-b border-brand-800 transition-all duration-300 shadow-sm" id="navbar">
+    <nav class="fixed w-full z-50 bg-brand-900/95 backdrop-blur-sm border-b border-brand-800 transition-all duration-300 shadow-sm"
+        id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
@@ -59,606 +67,722 @@
                     <i data-lucide="zap" class="h-8 w-8 text-white"></i>
                     <span class="font-display font-bold text-3xl text-white tracking-wide uppercase">KhiladiLive</span>
                 </div>
-                
+
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#features" class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Features</a>
-                    <a href="#data" class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Data Intel</a>
-                    <a href="#pricing" class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Pricing</a>
-                    <a 
-                    href="#download_cta"
-                    class="bg-white text-brand-900 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition shadow-lg transform hover:scale-105 active:scale-95">
+                    <a href="#features"
+                        class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Features</a>
+                    <a href="#data"
+                        class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Data
+                        Intel</a>
+                    <a href="#pricing"
+                        class="text-gray-200 hover:text-white font-medium transition hover:underline decoration-brand-600 underline-offset-4">Pricing</a>
+                    <a href="#download_cta"
+                        class="bg-white text-brand-900 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition shadow-lg transform hover:scale-105 active:scale-95">
                         Download App
                     </a>
                 </div>
-                
+
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-200 p-2 focus:outline-none" aria-label="Toggle mobile menu">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-200 p-2 focus:outline-none"
+                        aria-label="Toggle mobile menu">
                         <i data-lucide="menu" class="h-8 w-8"></i>
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-900 border-t border-brand-800 shadow-xl">
             <div class="px-4 pt-4 pb-6 space-y-2">
-                <a href="#features" class="block px-3 py-3 text-white hover:bg-brand-800 rounded-lg text-lg font-medium transition">Features</a>
-                <a href="#data" class="block px-3 py-3 text-white hover:bg-brand-800 rounded-lg text-lg font-medium transition">Data Intel</a>
-                <a href="#pricing" class="block px-3 py-3 text-white hover:bg-brand-800 rounded-lg text-lg font-medium transition">Pricing</a>
-                <a href="#" class="block w-full text-center mt-4 px-3 py-3 bg-white text-brand-900 font-bold rounded-lg shadow active:bg-gray-100">Download App</a>
+                <a href="#features"
+                    class="block px-3 py-3 text-white hover:bg-brand-800 rounded-lg text-lg font-medium transition">Features</a>
+                <a href="#data"
+                    class="block px-3 py-3 text-white hover:bg-brand-800 rounded-lg text-lg font-medium transition">Data
+                    Intel</a>
+                <a href="#pricing"
+                    class="block px-3 py-3 text-white hover:bg-brand-800 rounded-lg text-lg font-medium transition">Pricing</a>
+                <a href="#"
+                    class="block w-full text-center mt-4 px-3 py-3 bg-white text-brand-900 font-bold rounded-lg shadow active:bg-gray-100">Download
+                    App</a>
             </div>
         </div>
     </nav>
 
     <main>
-    <!-- Hero Section -->
-    <!-- Adjusted padding for mobile responsiveness -->
-    <div class="relative pt-24 pb-24 md:pt-32 md:pb-32 hero-pattern overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
-                    <div class="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-brand-600 bg-brand-800/50 text-white text-xs md:text-sm font-semibold mb-6">
-                        <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
-                        Live Scores • Advanced Stats • Social Leagues
-                    </div>
-                    <!-- Responsive Text Sizes -->
-                    <h1 class="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
-                        Don't Just Watch. <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-white">Be a True Khiladi.</span>
-                    </h1>
-                    <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-8 max-w-lg mx-auto md:mx-0 font-light leading-relaxed">
-                        Unlock elite cricket analytics, AI-driven pitch reports, and player matchups. Use pro-level data to dominate our <strong>Free-to-Play</strong> community contests.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <!-- Official Google Play Button Style -->
-                        <a 
-                        href="https://play.google.com/store/apps/details?id=com.khiladilive.cricket"
-                        target="_blank"
-                        class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive from Google Play Store">
-                            <svg class="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 3.5L42 24L8 44.5V3.5Z" stroke="none" fill="#4285F4"/>
-                                <path d="M42 24L30 31L8 8.5L42 24Z" fill="#EA4335"/>
-                                <path d="M42 24L8 39.5L30 17L42 24Z" fill="#FBBC04"/>
-                                <path d="M8 39.5V8.5L24 24L8 39.5Z" fill="#34A853"/>
-                            </svg>
-                            <div class="text-left flex flex-col">
-                                <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Get it on</span>
-                                <span class="text-lg font-bold leading-tight font-sans">Google Play</span>
-                            </div>
-                        </a>
-
-                        <!-- Direct Download Button (Shortened Text) -->
-                        <a 
-                        href="\downloads\app-release.apk"
-                        target="_blank"
-                        class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app directly">
-                            <i data-lucide="download" class="h-6 w-6"></i>
-                            Download
-                        </a>
-                    </div>
-                    
-                    <!-- Legal Badge -->
-                    <div class="mt-8 flex justify-center md:justify-start">
-                        <div class="text-xs sm:text-sm text-white font-semibold flex items-center gap-2 bg-brand-900/40 px-4 py-2 rounded-lg border border-brand-700/50 backdrop-blur-sm">
-                            <i data-lucide="shield-check" class="h-5 w-5 text-green-400"></i>
-                            <span>100% Legal • Skill Based • No Gambling</span>
+        <!-- Hero Section -->
+        <!-- Adjusted padding for mobile responsiveness -->
+        <div class="relative pt-24 pb-24 md:pt-32 md:pb-32 hero-pattern overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <div
+                            class="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-brand-600 bg-brand-800/50 text-white text-xs md:text-sm font-semibold mb-6">
+                            <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+                            Live Scores • Advanced Stats • Social Leagues
                         </div>
-                    </div>
-                </div>
+                        <!-- Responsive Text Sizes -->
+                        <h1
+                            class="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
+                            Don't Just Watch. <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-white">Be a True
+                                Khiladi.</span>
+                        </h1>
+                        <p
+                            class="text-base sm:text-lg md:text-xl text-gray-100 mb-8 max-w-lg mx-auto md:mx-0 font-light leading-relaxed">
+                            Unlock elite cricket analytics, AI-driven pitch reports, and player matchups. Use pro-level
+                            data to dominate our <strong>Free-to-Play</strong> community contests.
+                        </p>
 
-                <!-- Phone Mockup (Hidden on Mobile) -->
-                <div class="relative hidden md:block -mr-16 lg:-mr-12">
-                    <!-- Background Phone (Second Phone) -->
-                    <div class="absolute top-6 left-6 w-[270px] phone-mockup bg-gray-800 shadow-xl transform -rotate-6 scale-95 opacity-80 z-0">
-                        <!-- Background Phone Screen Content -->
-                        <div class="h-[540px] w-full bg-gray-100 overflow-hidden relative">
-                            <!-- Background Phone Header -->
-                            <div class="bg-blue-900 p-3 text-white">
-                                <div class="flex justify-between items-center mb-3">
-                                    <i data-lucide="menu" class="h-4 w-4"></i>
-                                    <span class="font-display text-lg uppercase tracking-wider">KhiladiLive</span>
-                                    <i data-lucide="user" class="h-4 w-4"></i>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <!-- Official Google Play Button Style -->
+                            <a href="https://play.google.com/store/apps/details?id=com.khiladilive.cricket"
+                                target="_blank"
+                                class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]"
+                                aria-label="Download KhiladiLive from Google Play Store">
+                                <img src="assets/images/playstore.png" class="h-8 w-8" alt="Google Play Store">
+                                <div class="text-left flex flex-col">
+                                    <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Get it
+                                        on</span>
+                                    <span class="text-lg font-bold leading-tight font-sans">Google Play</span>
                                 </div>
-                                <div class="bg-blue-800 p-2 rounded-lg">
-                                    <p class="text-xs text-blue-100">PAK vs NZ</p>
-                                    <p class="font-bold text-sm">142/6 (28.4)</p>
-                                    <span class="text-xs bg-green-500 px-1 py-0.5 rounded">LIVE</span>
+                            </a>
+
+                            <!-- App Store Button -->
+                            <a href="#" onclick="alert('Coming Soon'); return false;"
+                                class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-xl transform hover:-translate-y-1 active:scale-95 min-w-[200px]"
+                                aria-label="Download KhiladiLive from App Store">
+                                <img src="assets/images/apple.png" class="h-8 w-8" alt="App Store">
+                                <div class="text-left flex flex-col">
+                                    <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Download
+                                        on the</span>
+                                    <span class="text-lg font-bold leading-tight font-sans">App Store</span>
                                 </div>
-                            </div>
-                            
-                            <!-- Background Phone Stats -->
-                            <div class="p-3 space-y-3">
-                                <div class="bg-white p-3 rounded-lg shadow-sm border border-blue-200">
-                                    <h4 class="font-bold text-blue-800 text-xs mb-1 flex items-center gap-1">
-                                        <i data-lucide="trophy" class="h-3 w-3"></i> My League
-                                    </h4>
-                                    <p class="text-xs text-gray-600">Friends League #1</p>
-                                    <p class="font-bold text-sm text-green-600">Rank #2 🥈</p>
-                                </div>
-                                <div class="bg-gradient-to-r from-purple-600 to-purple-700 p-3 rounded-lg text-white">
-                                    <p class="text-xs">Player Pick</p>
-                                    <p class="font-bold text-sm">Babar Azam (C)</p>
-                                    <div class="flex justify-between text-xs mt-1">
-                                        <span>45* (38)</span>
-                                        <span class="text-yellow-200">+12 pts</span>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-3 rounded-lg border border-orange-200">
-                                    <p class="text-xs text-orange-700 font-semibold">⚡ Power Play Alert</p>
-                                    <p class="text-xs text-gray-600">Next 5 overs crucial</p>
-                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Legal Badge -->
+                        <div class="mt-8 flex justify-center md:justify-start">
+                            <div
+                                class="text-xs sm:text-sm text-white font-semibold flex items-center gap-2 bg-brand-900/40 px-4 py-2 rounded-lg border border-brand-700/50 backdrop-blur-sm">
+                                <i data-lucide="shield-check" class="h-5 w-5 text-green-400"></i>
+                                <span>100% Legal • Skill Based • No Gambling</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Main Phone (Front Phone) -->
-                    <div class="relative mx-auto w-[290px] phone-mockup bg-gray-900 shadow-2xl transform rotate-3 hover:scale-[1.02] transition duration-500 z-10">
-                        <!-- Mockup Screen Content -->
-                        <div class="h-[580px] w-full bg-gray-50 overflow-hidden relative">
-                            <!-- Header -->
-                            <div class="bg-brand-900 p-4 text-white">
-                                <div class="flex justify-between items-center mb-4">
-                                    <i data-lucide="menu" class="h-5 w-5"></i>
-                                    <span class="font-display text-xl uppercase tracking-wider">KhiladiLive</span>
-                                    <i data-lucide="bell" class="h-5 w-5"></i>
-                                </div>
-                                <div class="bg-brand-800 p-3 rounded-lg flex justify-between items-center shadow-inner">
-                                    <div>
-                                        <p class="text-xs text-red-100">IND vs AUS</p>
-                                        <p class="font-bold">245/3 (38.2)</p>
+                    <!-- Phone Mockup (Hidden on Mobile) -->
+                    <div class="relative hidden md:block -mr-16 lg:-mr-12">
+                        <!-- Background Phone (Second Phone) -->
+                        <div
+                            class="absolute top-6 left-6 w-[270px] phone-mockup bg-gray-800 shadow-xl transform -rotate-6 scale-95 opacity-80 z-0">
+                            <!-- Background Phone Screen Content -->
+                            <div class="h-[540px] w-full bg-gray-100 overflow-hidden relative">
+                                <!-- Background Phone Header -->
+                                <div class="bg-blue-900 p-3 text-white">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <i data-lucide="menu" class="h-4 w-4"></i>
+                                        <span class="font-display text-lg uppercase tracking-wider">KhiladiLive</span>
+                                        <i data-lucide="user" class="h-4 w-4"></i>
                                     </div>
-                                    <span class="text-xs bg-red-600 px-2 py-1 rounded animate-pulse">LIVE</span>
+                                    <div class="bg-blue-800 p-2 rounded-lg">
+                                        <p class="text-xs text-blue-100">PAK vs NZ</p>
+                                        <p class="font-bold text-sm">142/6 (28.4)</p>
+                                        <span class="text-xs bg-green-500 px-1 py-0.5 rounded">LIVE</span>
+                                    </div>
+                                </div>
+
+                                <!-- Background Phone Stats -->
+                                <div class="p-3 space-y-3">
+                                    <div class="bg-white p-3 rounded-lg shadow-sm border border-blue-200">
+                                        <h4 class="font-bold text-blue-800 text-xs mb-1 flex items-center gap-1">
+                                            <i data-lucide="trophy" class="h-3 w-3"></i> My League
+                                        </h4>
+                                        <p class="text-xs text-gray-600">Friends League #1</p>
+                                        <p class="font-bold text-sm text-green-600">Rank #2 🥈</p>
+                                    </div>
+                                    <div
+                                        class="bg-gradient-to-r from-purple-600 to-purple-700 p-3 rounded-lg text-white">
+                                        <p class="text-xs">Player Pick</p>
+                                        <p class="font-bold text-sm">Babar Azam (C)</p>
+                                        <div class="flex justify-between text-xs mt-1">
+                                            <span>45* (38)</span>
+                                            <span class="text-yellow-200">+12 pts</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-3 rounded-lg border border-orange-200">
+                                        <p class="text-xs text-orange-700 font-semibold">⚡ Power Play Alert</p>
+                                        <p class="text-xs text-gray-600">Next 5 overs crucial</p>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <!-- Stats Graphic -->
-                            <div class="p-4 space-y-4">
-                                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100">
-                                    <h3 class="font-bold text-gray-800 text-sm mb-2 flex items-center gap-2">
-                                        <i data-lucide="zap" class="h-4 w-4 text-brand-600"></i> AI Prediction
-                                    </h3>
-                                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-200 mb-1">
-                                        <div class="bg-brand-600 h-2.5 rounded-full" style="width: 75%"></div>
+                        </div>
+
+                        <!-- Main Phone (Front Phone) -->
+                        <div
+                            class="relative mx-auto w-[290px] phone-mockup bg-gray-900 shadow-2xl transform rotate-3 hover:scale-[1.02] transition duration-500 z-10">
+                            <!-- Mockup Screen Content -->
+                            <div class="h-[580px] w-full bg-gray-50 overflow-hidden relative">
+                                <!-- Header -->
+                                <div class="bg-brand-900 p-4 text-white">
+                                    <div class="flex justify-between items-center mb-4">
+                                        <i data-lucide="menu" class="h-5 w-5"></i>
+                                        <span class="font-display text-xl uppercase tracking-wider">KhiladiLive</span>
+                                        <i data-lucide="bell" class="h-5 w-5"></i>
                                     </div>
-                                    <p class="text-xs text-gray-500 text-right">Win Prob: 75%</p>
+                                    <div
+                                        class="bg-brand-800 p-3 rounded-lg flex justify-between items-center shadow-inner">
+                                        <div>
+                                            <p class="text-xs text-red-100">IND vs AUS</p>
+                                            <p class="font-bold">245/3 (38.2)</p>
+                                        </div>
+                                        <span class="text-xs bg-red-600 px-2 py-1 rounded animate-pulse">LIVE</span>
+                                    </div>
                                 </div>
 
-                                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100">
-                                    <h3 class="font-bold text-gray-800 text-sm mb-2">Player Matchup</h3>
-                                    <div class="flex justify-between text-xs text-gray-600">
-                                        <span>V. Kohli</span>
-                                        <span class="font-bold text-brand-700">vs</span>
-                                        <span>P. Cummins</span>
+                                <!-- Stats Graphic -->
+                                <div class="p-4 space-y-4">
+                                    <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100">
+                                        <h3 class="font-bold text-gray-800 text-sm mb-2 flex items-center gap-2">
+                                            <i data-lucide="zap" class="h-4 w-4 text-brand-600"></i> AI Prediction
+                                        </h3>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-200 mb-1">
+                                            <div class="bg-brand-600 h-2.5 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                        <p class="text-xs text-gray-500 text-right">Win Prob: 75%</p>
                                     </div>
-                                    <div class="mt-2 text-xs bg-red-50 p-2 rounded border border-red-100 text-red-800">
-                                        Weakness: Short ball outside off (Angle > 15°)
-                                    </div>
-                                </div>
 
-                                <div class="bg-gradient-to-r from-gray-900 to-gray-800 p-4 rounded-xl shadow-md text-white">
-                                    <h3 class="font-bold text-sm mb-1">Community League</h3>
-                                    <p class="text-xs text-gray-300 mb-3">Rank #42 - Free Entry</p>
-                                    <button class="w-full bg-brand-600 text-xs py-2 rounded font-bold">View Leaderboard</button>
+                                    <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100">
+                                        <h3 class="font-bold text-gray-800 text-sm mb-2">Player Matchup</h3>
+                                        <div class="flex justify-between text-xs text-gray-600">
+                                            <span>V. Kohli</span>
+                                            <span class="font-bold text-brand-700">vs</span>
+                                            <span>P. Cummins</span>
+                                        </div>
+                                        <div
+                                            class="mt-2 text-xs bg-red-50 p-2 rounded border border-red-100 text-red-800">
+                                            Weakness: Short ball outside off (Angle > 15°)
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="bg-gradient-to-r from-gray-900 to-gray-800 p-4 rounded-xl shadow-md text-white">
+                                        <h3 class="font-bold text-sm mb-1">Community League</h3>
+                                        <p class="text-xs text-gray-300 mb-3">Rank #42 - Free Entry</p>
+                                        <button class="w-full bg-brand-600 text-xs py-2 rounded font-bold">View
+                                            Leaderboard</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Curved Separator -->
-        <div class="absolute bottom-0 left-0 right-0">
-            <svg class="w-full h-16 md:h-32 block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-            </svg>
-        </div>
-    </div>
 
-    <!-- Features Section -->
-    <section id="features" class="py-8 md:py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-6 md:mb-10">
-                <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">More Than Just a Scoreboard</h2>
-                <p class="text-gray-600 text-base md:text-lg">We combine the fastest live data with deep cricket analytics to give you the IQ of a commentator.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
-                <!-- Feature 1 -->
-                <div class="bg-gray-50 p-6 md:p-8 rounded-2xl hover:shadow-xl transition duration-300 border border-gray-100 group text-center md:text-left max-w-sm md:max-w-none w-full">
-                    <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-900 transition duration-300 mx-auto md:mx-0">
-                        <i data-lucide="bar-chart-2" class="h-6 w-6 md:h-7 md:w-7 text-brand-700 group-hover:text-white transition"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Deep Analytics</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Access Wagon Wheels, Pitch Heatmaps, and detailed player performance trends that TV broadcasts miss.</p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="bg-gray-50 p-6 md:p-8 rounded-2xl hover:shadow-xl transition duration-300 border border-gray-100 group text-center md:text-left max-w-sm md:max-w-none w-full">
-                    <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-900 transition duration-300 mx-auto md:mx-0">
-                        <i data-lucide="users" class="h-6 w-6 md:h-7 md:w-7 text-brand-700 group-hover:text-white transition"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Social Leagues</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Join 100% Free contests. Create private leagues with friends, compete for badges, and climb the global leaderboard.</p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-gray-50 p-6 md:p-8 rounded-2xl hover:shadow-xl transition duration-300 border border-gray-100 group text-center md:text-left max-w-sm md:max-w-none w-full">
-                    <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-900 transition duration-300 mx-auto md:mx-0">
-                        <i data-lucide="cpu" class="h-6 w-6 md:h-7 md:w-7 text-brand-700 group-hover:text-white transition"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">AI Predictions</h3>
-                    <p class="text-gray-600 text-sm md:text-base">Our proprietary AI analyzes past match data to predict outcomes, key wickets, and high-scoring overs.</p>
-                </div>
+            <!-- Curved Separator -->
+            <div class="absolute bottom-0 left-0 right-0">
+                <svg class="w-full h-16 md:h-32 block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
+                    preserveAspectRatio="none">
+                    <path fill="#ffffff" fill-opacity="1"
+                        d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                    </path>
+                </svg>
             </div>
         </div>
-    </section>
 
-    <!-- Data Intel Section (Dark) -->
-    <section id="data" class="py-16 md:py-24 bg-brand-900 text-white relative overflow-hidden">
-        <!-- Decoration -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-800 rounded-full opacity-50 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-red-950 rounded-full opacity-50 blur-3xl"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="text-center lg:text-left">
-                    <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 leading-tight">Subscribe to Intelligence,<br>Not Luck.</h2>
-                    <p class="text-white text-base md:text-lg mb-8 font-light max-w-lg mx-auto lg:mx-0">
-                        Stop guessing. Our premium subscription unlocks the data used by professional analysts. Whether you are a casual fan or a serious cricket geek, get the insights that matter.
-                    </p>
-                    <ul class="space-y-4 inline-block text-left">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
-                            <span class="text-gray-100 text-sm md:text-base">Ad-Free Live Scores (Fastest in the market)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
-                            <span class="text-gray-100 text-sm md:text-base">Historical Player vs Player Matchups</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
-                            <span class="text-gray-100 text-sm md:text-base">Venue History & Pitch Report Analysis</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
-                            <span class="text-gray-100 text-sm md:text-base">Expert Commentary & News Feed</span>
-                        </li>
-                    </ul>
+        <!-- Features Section -->
+        <section id="features" class="py-8 md:py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-6 md:mb-10">
+                    <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">More Than Just a
+                        Scoreboard</h2>
+                    <p class="text-gray-600 text-base md:text-lg">We combine the fastest live data with deep cricket
+                        analytics to give you the IQ of a commentator.</p>
                 </div>
-                <div class="relative mt-8 lg:mt-0">
-                    <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-2xl">
-                        <!-- Pseudo Graph UI -->
-                        <div class="flex justify-between items-end mb-4 h-48">
-                            <div class="w-6 md:w-8 h-24 bg-red-400 rounded-t"></div>
-                            <div class="w-6 md:w-8 h-32 bg-red-500 rounded-t"></div>
-                            <div class="w-6 md:w-8 h-16 bg-red-300 rounded-t"></div>
-                            <div class="w-6 md:w-8 h-40 bg-white rounded-t"></div>
-                            <div class="w-6 md:w-8 h-28 bg-red-400 rounded-t"></div>
-                            <div class="w-6 md:w-8 h-36 bg-red-500 rounded-t"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+                    <!-- Feature 1 -->
+                    <div
+                        class="bg-gray-50 p-6 md:p-8 rounded-2xl hover:shadow-xl transition duration-300 border border-gray-100 group text-center md:text-left max-w-sm md:max-w-none w-full">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-900 transition duration-300 mx-auto md:mx-0">
+                            <i data-lucide="bar-chart-2"
+                                class="h-6 w-6 md:h-7 md:w-7 text-brand-700 group-hover:text-white transition"></i>
                         </div>
-                        <div class="h-px w-full bg-white/20 mb-4"></div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <h4 class="font-bold text-lg md:text-xl text-white">Rohit Sharma</h4>
-                                <p class="text-xs md:text-sm text-gray-300">Strike Rate vs Spin (Overs 7-15)</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Deep Analytics</h3>
+                        <p class="text-gray-600 text-sm md:text-base">Access Wagon Wheels, Pitch Heatmaps, and detailed
+                            player performance trends that TV broadcasts miss.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div
+                        class="bg-gray-50 p-6 md:p-8 rounded-2xl hover:shadow-xl transition duration-300 border border-gray-100 group text-center md:text-left max-w-sm md:max-w-none w-full">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-900 transition duration-300 mx-auto md:mx-0">
+                            <i data-lucide="users"
+                                class="h-6 w-6 md:h-7 md:w-7 text-brand-700 group-hover:text-white transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Social Leagues</h3>
+                        <p class="text-gray-600 text-sm md:text-base">Join 100% Free contests. Create private leagues
+                            with friends, compete for badges, and climb the global leaderboard.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div
+                        class="bg-gray-50 p-6 md:p-8 rounded-2xl hover:shadow-xl transition duration-300 border border-gray-100 group text-center md:text-left max-w-sm md:max-w-none w-full">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 bg-brand-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-900 transition duration-300 mx-auto md:mx-0">
+                            <i data-lucide="cpu"
+                                class="h-6 w-6 md:h-7 md:w-7 text-brand-700 group-hover:text-white transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI Predictions</h3>
+                        <p class="text-gray-600 text-sm md:text-base">Our proprietary AI analyzes past match data to
+                            predict outcomes, key wickets, and high-scoring overs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Intel Section (Dark) -->
+        <section id="data" class="py-16 md:py-24 bg-brand-900 text-white relative overflow-hidden">
+            <!-- Decoration -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-800 rounded-full opacity-50 blur-3xl">
+            </div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-red-950 rounded-full opacity-50 blur-3xl">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div class="text-center lg:text-left">
+                        <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 leading-tight">Subscribe to
+                            Intelligence,<br>Not Luck.</h2>
+                        <p class="text-white text-base md:text-lg mb-8 font-light max-w-lg mx-auto lg:mx-0">
+                            Stop guessing. Our premium subscription unlocks the data used by professional analysts.
+                            Whether you are a casual fan or a serious cricket geek, get the insights that matter.
+                        </p>
+                        <ul class="space-y-4 inline-block text-left">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
+                                <span class="text-gray-100 text-sm md:text-base">Ad-Free Live Scores (Fastest in the
+                                    market)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
+                                <span class="text-gray-100 text-sm md:text-base">Historical Player vs Player
+                                    Matchups</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
+                                <span class="text-gray-100 text-sm md:text-base">Venue History & Pitch Report
+                                    Analysis</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle" class="text-green-400 h-5 w-5"></i>
+                                <span class="text-gray-100 text-sm md:text-base">Expert Commentary & News Feed</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative mt-8 lg:mt-0">
+                        <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-2xl">
+                            <!-- Pseudo Graph UI -->
+                            <div class="flex justify-between items-end mb-4 h-48">
+                                <div class="w-6 md:w-8 h-24 bg-red-400 rounded-t"></div>
+                                <div class="w-6 md:w-8 h-32 bg-red-500 rounded-t"></div>
+                                <div class="w-6 md:w-8 h-16 bg-red-300 rounded-t"></div>
+                                <div class="w-6 md:w-8 h-40 bg-white rounded-t"></div>
+                                <div class="w-6 md:w-8 h-28 bg-red-400 rounded-t"></div>
+                                <div class="w-6 md:w-8 h-36 bg-red-500 rounded-t"></div>
                             </div>
-                            <span class="text-2xl md:text-3xl font-display font-bold text-green-400">142.5</span>
+                            <div class="h-px w-full bg-white/20 mb-4"></div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-bold text-lg md:text-xl text-white">Rohit Sharma</h4>
+                                    <p class="text-xs md:text-sm text-gray-300">Strike Rate vs Spin (Overs 7-15)</p>
+                                </div>
+                                <span class="text-2xl md:text-3xl font-display font-bold text-green-400">142.5</span>
+                            </div>
+                        </div>
+                        <!-- Floating badge -->
+                        <div
+                            class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white text-brand-900 p-3 md:p-4 rounded-xl shadow-lg font-bold flex items-center gap-2">
+                            <i data-lucide="trending-up" class="h-5 w-5"></i>
+                            <span class="text-sm md:text-base">Data Driven</span>
                         </div>
                     </div>
-                    <!-- Floating badge -->
-                    <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white text-brand-900 p-3 md:p-4 rounded-xl shadow-lg font-bold flex items-center gap-2">
-                        <i data-lucide="trending-up" class="h-5 w-5"></i>
-                        <span class="text-sm md:text-base">Data Driven</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">Simple, Transparent
+                        Plans</h2>
+                    <p class="text-gray-600">Free to play contests. Pay only for the tools to win.</p>
+                </div>
+
+                <!-- Aligned Subscription Options -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch justify-items-center">
+                    <!-- Free Plan -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col h-full hover:shadow-xl transition text-center md:text-left max-w-sm md:max-w-none w-full">
+                        <h3 class="text-2xl font-bold text-gray-800">Fan (Free)</h3>
+                        <div class="my-4">
+                            <span class="text-4xl font-display font-bold">₹0</span>
+                            <span class="text-gray-500">/ forever</span>
+                        </div>
+                        <p class="text-gray-500 mb-6">Perfect for casual viewing and social play.</p>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm md:text-base">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-gray-400"></i>
+                                <span class="text-gray-700">Live Scores (Standard Speed)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-brand-600"></i>
+                                <span class="text-gray-700 font-medium">Join Free Contests</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-gray-400"></i>
+                                <span class="text-gray-700">Community Chat</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="x" class="h-5 w-5 text-red-300"></i>
+                                <span class="text-gray-400">Contains Ads</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-3 rounded-lg border-2 border-brand-900 text-brand-900 font-bold hover:bg-brand-50 transition active:scale-95 mt-auto">Get
+                            Started</button>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div
+                        class="bg-brand-900 p-8 rounded-2xl shadow-xl border border-brand-800 text-white relative overflow-hidden flex flex-col h-full hover:shadow-2xl transition text-center md:text-left max-w-sm md:max-w-none w-full">
+                        <div
+                            class="absolute top-0 right-0 bg-yellow-400 text-brand-900 text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">
+                            Most Popular</div>
+                        <h3 class="text-2xl font-bold">Analyst Pro</h3>
+                        <div class="my-4">
+                            <span class="text-4xl font-display font-bold">₹199</span>
+                            <span class="text-gray-100">/ month</span>
+                        </div>
+                        <p class="text-gray-100 mb-6">Unlock the full power of data and AI.</p>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm md:text-base">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
+                                <span>Ad-Free Experience</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
+                                <span>Detailed Player Matchups</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
+                                <span>AI-Powered Win Predictions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
+                                <span>Access to Elite Community Leagues</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
+                                <span>Live Cricket Streaming</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full py-3 rounded-lg bg-white text-brand-900 font-bold hover:bg-gray-100 transition shadow-lg active:scale-95 mt-auto">Subscribe
+                            Now</button>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-400 mt-8">* Subscription covers data services only. Contest
+                    entry is always free.</p>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 md:py-24 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">Frequently Asked
+                        Questions</h2>
+                    <p class="text-gray-600">Common questions about our features and legal status.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none"
+                            onclick="toggleFaq('faq1')" aria-label="Toggle answer for: Is KhiladiLive legal in India?">
+                            <span class="font-bold text-gray-900 text-sm md:text-base">Is KhiladiLive legal in
+                                India?</span>
+                            <i data-lucide="chevron-down"
+                                class="h-5 w-5 text-gray-500 transform transition-transform duration-200"
+                                id="icon-faq1"></i>
+                        </button>
+                        <div id="faq1"
+                            class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
+                            Yes, absolutely. KhiladiLive is a sports analytics and community platform. We do not offer
+                            "Real Money Gaming" or gambling services. All contests on our platform are 100% free to
+                            enter and are designed for social competition and entertainment.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none"
+                            onclick="toggleFaq('faq2')"
+                            aria-label="Toggle answer for: Do I need to pay a subscription to play contests?">
+                            <span class="font-bold text-gray-900 text-sm md:text-base">Do I need to pay a subscription
+                                to play contests?</span>
+                            <i data-lucide="chevron-down"
+                                class="h-5 w-5 text-gray-500 transform transition-transform duration-200"
+                                id="icon-faq2"></i>
+                        </button>
+                        <div id="faq2"
+                            class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
+                            No. Access to community contests is completely free for all users ("Fan" tier). The "Analyst
+                            Pro" subscription strictly covers premium data features like AI predictions, advanced player
+                            matchups, and an ad-free experience. Buying a subscription does not give you any advantage
+                            in contest entry.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none"
+                            onclick="toggleFaq('faq3')" aria-label="Toggle answer for: Can I win cash prizes?">
+                            <span class="font-bold text-gray-900 text-sm md:text-base">Can I win cash prizes?</span>
+                            <i data-lucide="chevron-down"
+                                class="h-5 w-5 text-gray-500 transform transition-transform duration-200"
+                                id="icon-faq3"></i>
+                        </button>
+                        <div id="faq3"
+                            class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
+                            KhiladiLive does not offer cash winnings or gambling payouts. Our leaderboards are for
+                            bragging rights, digital badges, and community status. We strictly adhere to the Online
+                            Gaming Act 2025 guidelines regarding non-monetary social games.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button
+                            class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none"
+                            onclick="toggleFaq('faq4')"
+                            aria-label="Toggle answer for: How accurate are the AI predictions?">
+                            <span class="font-bold text-gray-900 text-sm md:text-base">How accurate are the AI
+                                predictions?</span>
+                            <i data-lucide="chevron-down"
+                                class="h-5 w-5 text-gray-500 transform transition-transform duration-200"
+                                id="icon-faq4"></i>
+                        </button>
+                        <div id="faq4"
+                            class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
+                            Our AI models analyze historical data, pitch conditions, and player form to generate
+                            probabilities. While highly sophisticated, they are statistical estimates intended to
+                            enhance your viewing experience and understanding of the game, not guarantees of future
+                            outcomes.
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 md:py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">Simple, Transparent Plans</h2>
-                <p class="text-gray-600">Free to play contests. Pay only for the tools to win.</p>
-            </div>
-
-            <!-- Aligned Subscription Options -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch justify-items-center">
-                <!-- Free Plan -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col h-full hover:shadow-xl transition text-center md:text-left max-w-sm md:max-w-none w-full">
-                    <h3 class="text-2xl font-bold text-gray-800">Fan (Free)</h3>
-                    <div class="my-4">
-                        <span class="text-4xl font-display font-bold">₹0</span>
-                        <span class="text-gray-500">/ forever</span>
-                    </div>
-                    <p class="text-gray-500 mb-6">Perfect for casual viewing and social play.</p>
-                    <ul class="space-y-4 mb-8 flex-1 text-sm md:text-base">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-gray-400"></i>
-                            <span class="text-gray-700">Live Scores (Standard Speed)</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-brand-600"></i>
-                            <span class="text-gray-700 font-medium">Join Free Contests</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-gray-400"></i>
-                            <span class="text-gray-700">Community Chat</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="x" class="h-5 w-5 text-red-300"></i>
-                            <span class="text-gray-400">Contains Ads</span>
-                        </li>
-                    </ul>
-                    <button class="w-full py-3 rounded-lg border-2 border-brand-900 text-brand-900 font-bold hover:bg-brand-50 transition active:scale-95 mt-auto">Get Started</button>
+        <!-- Testimonial / Trust -->
+        <section class="py-16 md:py-20 bg-gray-50 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">What Cricket Fans Say
+                    </h2>
+                    <p class="text-gray-600">Join thousands of satisfied users who've transformed their cricket
+                        experience</p>
                 </div>
 
-                <!-- Pro Plan -->
-                <div class="bg-brand-900 p-8 rounded-2xl shadow-xl border border-brand-800 text-white relative overflow-hidden flex flex-col h-full hover:shadow-2xl transition text-center md:text-left max-w-sm md:max-w-none w-full">
-                    <div class="absolute top-0 right-0 bg-yellow-400 text-brand-900 text-xs font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Most Popular</div>
-                    <h3 class="text-2xl font-bold">Analyst Pro</h3>
-                    <div class="my-4">
-                        <span class="text-4xl font-display font-bold">₹199</span>
-                        <span class="text-gray-100">/ month</span>
+                <!-- Auto-sliding testimonial carousel -->
+                <div class="relative">
+                    <div class="testimonial-carousel flex transition-transform duration-500 ease-in-out"
+                        id="testimonialCarousel">
+                        <!-- Testimonial 1 -->
+                        <div class="flex-none w-full px-4">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
+                                <h3
+                                    class="text-xl md:text-3xl font-display font-medium text-black mb-8 italic leading-relaxed">
+                                    "Finally, an app that focuses on the actual cricket stats instead of just betting.
+                                    The analytics help me understand th
+                                    uch better."
+                                </h3>
+                                <div class="flex items-center justify-center gap-4">
+                                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+                                            alt="Arjun Mehta">
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="font-bold text-gray-900 text-sm md:text-base">Arjun Mehta</p>
+                                        <p class="text-xs md:text-sm text-gray-500">Cricket Analyst & Pro Subscriber</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="flex-none w-full px-4">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
+                                <h3
+                                    class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
+                                    "The AI predictions are incredibly accurate! I love how detailed the player matchups
+                                    are. It's like having a cricket expert in my pocket."
+                                </h3>
+                                <div class="flex items-center justify-center gap-4">
+                                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Priya"
+                                            alt="Priya Sharma">
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="font-bold text-gray-900 text-sm md:text-base">Priya Sharma</p>
+                                        <p class="text-xs md:text-sm text-gray-500">Data Scientist & Cricket Enthusiast
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="flex-none w-full px-4">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
+                                <h3
+                                    class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
+                                    "Best cricket app I've used! The free contests are so much fun, and I love competing
+                                    with my friends without any money involved."
+                                </h3>
+                                <div class="flex items-center justify-center gap-4">
+                                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul"
+                                            alt="Rahul Kumar">
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="font-bold text-gray-900 text-sm md:text-base">Rahul Kumar</p>
+                                        <p class="text-xs md:text-sm text-gray-500">Software Engineer & Fantasy Player
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="flex-none w-full px-4">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
+                                <h3
+                                    class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
+                                    "The pitch analysis and weather data helped me understand why certain players
+                                    perform better in specific conditions. Amazing insights!"
+                                </h3>
+                                <div class="flex items-center justify-center gap-4">
+                                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha"
+                                            alt="Sneha Patel">
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="font-bold text-gray-900 text-sm md:text-base">Sneha Patel</p>
+                                        <p class="text-xs md:text-sm text-gray-500">Sports Journalist & Cricket Blogger
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="flex-none w-full px-4">
+                            <div class="max-w-4xl mx-auto text-center">
+                                <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
+                                <h3
+                                    class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
+                                    "As a cricket coach, I find the player performance trends incredibly valuable. It
+                                    helps me analyze my team's strengths and weaknesses."
+                                </h3>
+                                <div class="flex items-center justify-center gap-4">
+                                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram"
+                                            alt="Vikram Singh">
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="font-bold text-gray-900 text-sm md:text-base">Vikram Singh</p>
+                                        <p class="text-xs md:text-sm text-gray-500">Cricket Coach & Former Player</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-gray-100 mb-6">Unlock the full power of data and AI.</p>
-                    <ul class="space-y-4 mb-8 flex-1 text-sm md:text-base">
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
-                            <span>Ad-Free Experience</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
-                            <span>Detailed Player Matchups</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
-                            <span>AI-Powered Win Predictions</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
-                            <span>Access to Elite Community Leagues</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i data-lucide="check" class="h-5 w-5 text-yellow-400"></i>
-                            <span>Live Cricket Streaming</span>
-                        </li>
-                    </ul>
-                    <button class="w-full py-3 rounded-lg bg-white text-brand-900 font-bold hover:bg-gray-100 transition shadow-lg active:scale-95 mt-auto">Subscribe Now</button>
-                </div>
-            </div>
-            <p class="text-center text-xs text-gray-400 mt-8">* Subscription covers data services only. Contest entry is always free.</p>
-        </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="py-16 md:py-24 bg-white border-t border-gray-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">Frequently Asked Questions</h2>
-                <p class="text-gray-600">Common questions about our features and legal status.</p>
-            </div>
-
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq1')" aria-label="Toggle answer for: Is KhiladiLive legal in India?">
-                        <span class="font-bold text-gray-900 text-sm md:text-base">Is KhiladiLive legal in India?</span>
-                        <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq1"></i>
+                    <!-- Left/Right Navigation Buttons -->
+                    <button id="prevBtn"
+                        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10"
+                        aria-label="Previous testimonial">
+                        <i data-lucide="chevron-left" class="h-6 w-6"></i>
                     </button>
-                    <div id="faq1" class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
-                        Yes, absolutely. KhiladiLive is a sports analytics and community platform. We do not offer "Real Money Gaming" or gambling services. All contests on our platform are 100% free to enter and are designed for social competition and entertainment.
-                    </div>
-                </div>
 
-                <!-- FAQ 2 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq2')" aria-label="Toggle answer for: Do I need to pay a subscription to play contests?">
-                        <span class="font-bold text-gray-900 text-sm md:text-base">Do I need to pay a subscription to play contests?</span>
-                        <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq2"></i>
+                    <button id="nextBtn"
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10"
+                        aria-label="Next testimonial">
+                        <i data-lucide="chevron-right" class="h-6 w-6"></i>
                     </button>
-                    <div id="faq2" class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
-                        No. Access to community contests is completely free for all users ("Fan" tier). The "Analyst Pro" subscription strictly covers premium data features like AI predictions, advanced player matchups, and an ad-free experience. Buying a subscription does not give you any advantage in contest entry.
-                    </div>
-                </div>
-
-                <!-- FAQ 3 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq3')" aria-label="Toggle answer for: Can I win cash prizes?">
-                        <span class="font-bold text-gray-900 text-sm md:text-base">Can I win cash prizes?</span>
-                        <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq3"></i>
-                    </button>
-                    <div id="faq3" class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
-                        KhiladiLive does not offer cash winnings or gambling payouts. Our leaderboards are for bragging rights, digital badges, and community status. We strictly adhere to the Online Gaming Act 2025 guidelines regarding non-monetary social games.
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div class="border border-gray-200 rounded-lg overflow-hidden">
-                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition focus:outline-none" onclick="toggleFaq('faq4')" aria-label="Toggle answer for: How accurate are the AI predictions?">
-                        <span class="font-bold text-gray-900 text-sm md:text-base">How accurate are the AI predictions?</span>
-                        <i data-lucide="chevron-down" class="h-5 w-5 text-gray-500 transform transition-transform duration-200" id="icon-faq4"></i>
-                    </button>
-                    <div id="faq4" class="hidden px-6 py-4 bg-white text-gray-600 border-t border-gray-200 text-sm md:text-base">
-                        Our AI models analyze historical data, pitch conditions, and player form to generate probabilities. While highly sophisticated, they are statistical estimates intended to enhance your viewing experience and understanding of the game, not guarantees of future outcomes.
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonial / Trust -->
-    <section class="py-16 md:py-20 bg-gray-50 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-brand-900 font-display font-bold text-3xl md:text-4xl mb-4">What Cricket Fans Say</h2>
-                <p class="text-gray-600">Join thousands of satisfied users who've transformed their cricket experience</p>
-            </div>
-            
-            <!-- Auto-sliding testimonial carousel -->
-            <div class="relative">
-                <div class="testimonial-carousel flex transition-transform duration-500 ease-in-out" id="testimonialCarousel">
-                    <!-- Testimonial 1 -->
-                    <div class="flex-none w-full px-4">
-                        <div class="max-w-4xl mx-auto text-center">
-                            <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
-                            <h3 class="text-xl md:text-3xl font-display font-medium text-black mb-8 italic leading-relaxed">
-                                "Finally, an app that focuses on the actual cricket stats instead of just betting. The analytics help me understand th
-                                uch better."
-                            </h3>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Arjun Mehta">
-                                </div>
-                                <div class="text-left">
-                                    <p class="font-bold text-gray-900 text-sm md:text-base">Arjun Mehta</p>
-                                    <p class="text-xs md:text-sm text-gray-500">Cricket Analyst & Pro Subscriber</p>
-                                </div>
-                            </div>
+        <!-- Download CTA -->
+        <section class="py-16 md:py-20 bg-brand-800 text-white text-center" id="download_cta">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Ready to Level Up?</h2>
+                <p class="text-base md:text-lg text-white mb-10">Join 100,000+ cricket fans using KhiladiLive today.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <!-- Official Google Play Button Style -->
+                    <a href="https://play.google.com/store/apps/details?id=com.khiladilive.cricket" target="_blank"
+                        class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-lg active:scale-95 min-w-[200px]"
+                        aria-label="Get KhiladiLive on Google Play">
+                        <img src="assets/images/playstore.png" class="h-8 w-8" alt="Google Play Store">
+                        <div class="text-left flex flex-col">
+                            <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Get it on</span>
+                            <span class="text-lg font-bold leading-tight font-sans">Google Play</span>
                         </div>
-                    </div>
-                    
-                    <!-- Testimonial 2 -->
-                    <div class="flex-none w-full px-4">
-                        <div class="max-w-4xl mx-auto text-center">
-                            <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
-                            <h3 class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
-                                "The AI predictions are incredibly accurate! I love how detailed the player matchups are. It's like having a cricket expert in my pocket."
-                            </h3>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Priya" alt="Priya Sharma">
-                                </div>
-                                <div class="text-left">
-                                    <p class="font-bold text-gray-900 text-sm md:text-base">Priya Sharma</p>
-                                    <p class="text-xs md:text-sm text-gray-500">Data Scientist & Cricket Enthusiast</p>
-                                </div>
-                            </div>
+                    </a>
+
+                    <!-- App Store Button -->
+                    <a href="#" onclick="alert('Coming Soon'); return false;"
+                        class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-lg active:scale-95 min-w-[200px]"
+                        aria-label="Download KhiladiLive from App Store">
+                        <img src="assets/images/apple.png" class="h-8 w-8" alt="App Store">
+                        <div class="text-left flex flex-col">
+                            <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Download on
+                                the</span>
+                            <span class="text-lg font-bold leading-tight font-sans">App Store</span>
                         </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="flex-none w-full px-4">
-                        <div class="max-w-4xl mx-auto text-center">
-                            <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
-                            <h3 class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
-                                "Best cricket app I've used! The free contests are so much fun, and I love competing with my friends without any money involved."
-                            </h3>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rahul" alt="Rahul Kumar">
-                                </div>
-                                <div class="text-left">
-                                    <p class="font-bold text-gray-900 text-sm md:text-base">Rahul Kumar</p>
-                                    <p class="text-xs md:text-sm text-gray-500">Software Engineer & Fantasy Player</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 4 -->
-                    <div class="flex-none w-full px-4">
-                        <div class="max-w-4xl mx-auto text-center">
-                            <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
-                            <h3 class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
-                                "The pitch analysis and weather data helped me understand why certain players perform better in specific conditions. Amazing insights!"
-                            </h3>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha" alt="Sneha Patel">
-                                </div>
-                                <div class="text-left">
-                                    <p class="font-bold text-gray-900 text-sm md:text-base">Sneha Patel</p>
-                                    <p class="text-xs md:text-sm text-gray-500">Sports Journalist & Cricket Blogger</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Testimonial 5 -->
-                    <div class="flex-none w-full px-4">
-                        <div class="max-w-4xl mx-auto text-center">
-                            <i data-lucide="quote" class="h-8 w-8 md:h-10 md:w-10 text-brand-200 mx-auto mb-6"></i>
-                            <h3 class="text-xl md:text-3xl font-display font-medium text-gray-900 mb-8 italic leading-relaxed">
-                                "As a cricket coach, I find the player performance trends incredibly valuable. It helps me analyze my team's strengths and weaknesses."
-                            </h3>
-                            <div class="flex items-center justify-center gap-4">
-                                <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-200 rounded-full overflow-hidden">
-                                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram" alt="Vikram Singh">
-                                </div>
-                                <div class="text-left">
-                                    <p class="font-bold text-gray-900 text-sm md:text-base">Vikram Singh</p>
-                                    <p class="text-xs md:text-sm text-gray-500">Cricket Coach & Former Player</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                
-                <!-- Left/Right Navigation Buttons -->
-                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10" aria-label="Previous testimonial">
-                    <i data-lucide="chevron-left" class="h-6 w-6"></i>
-                </button>
-                
-                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-brand-900 hover:text-brand-600 transition-all duration-300 z-10" aria-label="Next testimonial">
-                    <i data-lucide="chevron-right" class="h-6 w-6"></i>
-                </button>
             </div>
-        </div>
-    </section>
-
-    <!-- Download CTA -->
-    <section class="py-16 md:py-20 bg-brand-800 text-white text-center" id="download_cta">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Ready to Level Up?</h2>
-            <p class="text-base md:text-lg text-white mb-10">Join 100,000+ cricket fans using KhiladiLive today.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <!-- Official Google Play Button Style -->
-                <a 
-                href="https://play.google.com/store/apps/details?id=com.khiladilive.cricket"
-                target="_blank"
-                class="flex items-center justify-center gap-3 bg-black text-white px-6 py-2.5 rounded-xl border border-gray-800 hover:bg-gray-900 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Get KhiladiLive on Google Play">
-                    <svg class="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 3.5L42 24L8 44.5V3.5Z" stroke="none" fill="#4285F4"/>
-                        <path d="M42 24L30 31L8 8.5L42 24Z" fill="#EA4335"/>
-                        <path d="M42 24L8 39.5L30 17L42 24Z" fill="#FBBC04"/>
-                        <path d="M8 39.5V8.5L24 24L8 39.5Z" fill="#34A853"/>
-                    </svg>
-                    <div class="text-left flex flex-col">
-                        <span class="text-[10px] uppercase leading-none font-medium text-gray-300">Get it on</span>
-                        <span class="text-lg font-bold leading-tight font-sans">Google Play</span>
-                    </div>
-                </a>
-
-                <!-- Direct Download Button (Shortened Text) -->
-                <a 
-                href="\downloads\app-release.apk"
-                target="_blank"
-                class="flex items-center justify-center gap-3 bg-white text-brand-900 px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg active:scale-95 min-w-[200px]" aria-label="Download KhiladiLive app now">
-                    <i data-lucide="download" class="h-6 w-6"></i>
-                    Download
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
     </main>
 
     <!-- Footer -->
     <div id="footer"></div>
     <script>
         fetch("footer.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-            lucide.createIcons(); // render icons AFTER footer loads
-        });
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+                lucide.createIcons(); // render icons AFTER footer loads
+            });
     </script>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
