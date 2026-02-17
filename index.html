@@ -14,6 +14,98 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore, doc, getDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // TODO: Replace with your Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCjm_KXFBwuOt43hkK7sZKdVVDotRAlOGA",
+            authDomain: "khiladilive-cricket.firebaseapp.com",
+            projectId: "khiladilive-cricket",
+            storageBucket: "khiladilive-cricket.firebasestorage.app",
+            messagingSenderId: "428032732572",
+            appId: "1:428032732572:web:671a4eeb41fc5ab6e7ec59",
+            measurementId: "G-31C2B8RWG3"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Load pricing from Firebase with 48-hour cache
+        async function loadPricing() {
+            const CACHE_KEY = 'khiladi_pricing';
+            const CACHE_DURATION = 48 * 60 * 60 * 1000; // 48 hours in milliseconds
+
+            // Check if we have cached data
+            const cachedData = localStorage.getItem(CACHE_KEY);
+            if (cachedData) {
+                try {
+                    const { price, timestamp } = JSON.parse(cachedData);
+                    const now = Date.now();
+
+                    // If cache is still valid (within 48 hours)
+                    if (now - timestamp < CACHE_DURATION) {
+                        console.log('Using cached pricing data');
+                        const pricingElement = document.getElementById("pricing-container");
+                        if (pricingElement) {
+                            pricingElement.innerHTML = `₹${price}<span class="text-gray-100">/ month</span>`;
+                        }
+                        return; // Exit early, no need to fetch from Firebase
+                    }
+                } catch (e) {
+                    console.warn('Failed to parse cached pricing data', e);
+                    localStorage.removeItem(CACHE_KEY);
+                }
+            }
+
+            // If no valid cache, fetch from Firebase
+            console.log('Fetching pricing from Firebase...');
+            const docRef = doc(db, "App", "subscription");
+
+            try {
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    const monthlyPrice = data.monthly;
+
+                    // Cache the price with current timestamp
+                    localStorage.setItem(CACHE_KEY, JSON.stringify({
+                        price: monthlyPrice,
+                        timestamp: Date.now()
+                    }));
+
+                    const pricingElement = document.getElementById("pricing-container");
+                    if (pricingElement) {
+                        pricingElement.innerHTML = `₹${monthlyPrice}<span class="text-gray-100">/ month</span>`;
+                    }
+                } else {
+                    console.error("Document 'subscription' not found!");
+                    const pricingElement = document.getElementById("pricing-container");
+                    if (pricingElement) {
+                        pricingElement.innerHTML = `₹199<span class="text-gray-100">/ month</span>`;
+                    }
+                }
+            } catch (error) {
+                console.error("Error fetching price:", error);
+                const pricingElement = document.getElementById("pricing-container");
+                if (pricingElement) {
+                    pricingElement.innerHTML = `₹199<span class="text-gray-100">/ month</span>`;
+                }
+            }
+        }
+
+        // Load pricing when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadPricing);
+        } else {
+            loadPricing();
+        }
+    </script>
     <link
         href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Inter:wght@300;400;600;700&display=swap"
         rel="stylesheet">
@@ -465,8 +557,8 @@
                             Most Popular</div>
                         <h3 class="text-2xl font-bold">Analyst Pro</h3>
                         <div class="my-4">
-                            <span class="text-4xl font-display font-bold">₹199</span>
-                            <span class="text-gray-100">/ month</span>
+                            <span id="pricing-container" class="text-4xl font-display font-bold">₹199<span
+                                    class="text-gray-100">/ month</span></span>
                         </div>
                         <p class="text-gray-100 mb-6">Unlock the full power of data and AI.</p>
                         <ul class="space-y-4 mb-8 flex-1 text-sm md:text-base">
